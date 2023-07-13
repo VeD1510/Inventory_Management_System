@@ -29,6 +29,7 @@ public class InventoryApp {
 			break;
 			case 5:il.deleteByname();
 			break;
+			
 
 			default:System.out.println("Invalid choice");
 			}
