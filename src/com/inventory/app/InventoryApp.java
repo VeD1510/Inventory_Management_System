@@ -15,7 +15,7 @@ public class InventoryApp {
 		char ch;
 		do {
 			System.out.println("enter the choice");
-			System.out.println("1.Add product\n2.Remove Product\n"
+			System.out.println("1.Add product\n2.Remove Product By ID\n"
 					+ "3.Search Product By Name\n4.Display All Products\n5.Delete Product By name");
 			int choice = sc.nextInt();
 			switch(choice) {
