@@ -11,7 +11,7 @@ public class InventoryApp {
 		InventoryImplimentation il = new InventoryImplimentation();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Welcome to Inventory Management System App");
+		System.out.println("============Welcome to Inventory Management System App=============");
 		char ch;
 		do {
 			System.out.println("enter the choice");
