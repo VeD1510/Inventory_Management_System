@@ -7,5 +7,6 @@ public interface InventoryManagement {
 	void displayProductByName();
 	void displayAllProduct();
 	void deleteByname();
+	void displayTotal();
 
 }

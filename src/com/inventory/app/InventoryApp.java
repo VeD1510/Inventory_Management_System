@@ -16,7 +16,7 @@ public class InventoryApp {
 		do {
 			System.out.println("enter the choice");
 			System.out.println("1.Add product\n2.Remove Product By ID\n"
-					+ "3.Search Product By Name\n4.Display All Products\n5.Delete Product By name");
+					+ "3.Search Product By Name\n4.Display All Products\n5.Delete Product By name\n6.Display Total Price");
 			int choice = sc.nextInt();
 			switch(choice) {
 			case 1:il.addProduct();
@@ -28,6 +28,8 @@ public class InventoryApp {
 			case 4:il.displayAllProduct();
 			break;
 			case 5:il.deleteByname();
+			break;
+			case 6:il.displayTotal();
 			break;
 			
 

@@ -73,6 +73,7 @@ public class InventoryImplimentation implements InventoryManagement {
 		{
 			if(s.equalsIgnoreCase(ii.getProduct().getProductName()))
 			{
+				System.out.println("Product ID        Product Name        Category ID        Price        QTY");
 				System.out.println(ii);
 			}
 			
@@ -85,18 +86,33 @@ public class InventoryImplimentation implements InventoryManagement {
 	public void displayAllProduct() 
 	{
 		int count=1;
+		System.out.println("--------------------------------------------------------------------------------");
+		System.out.println("   Product ID  Product Name  Category ID  Price  QTY");
 		for(InventoryItem ii : iAl)
 		{
 			
+			
 			System.out.println(count+".  "+ii);
+			
 			count++;
 		}
+		System.out.println("--------------------------------------------------------------------------------");
 		
 	}
 
 	@Override
 	public void deleteByname() {
 		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void displayTotal() {
+		
+		for(InventoryItem i : iAl)
+		{
+			System.out.println(i+"       "+(i.getQuantity()*i.getProduct().getProductPrice()));
+		}
 		
 	}
 

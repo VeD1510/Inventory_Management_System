@@ -31,7 +31,7 @@ public class InventoryItem {
 
 	@Override
 	public String toString() {
-		return  product + "   " + quantity ;
+		return  product + "       " + quantity ;
 	}
 	
 	
