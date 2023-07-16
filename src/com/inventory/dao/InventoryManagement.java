@@ -8,5 +8,6 @@ public interface InventoryManagement {
 	void displayAllProduct();
 	void deleteByname();
 	void displayTotal();
+	void updateInventory();
 
 }

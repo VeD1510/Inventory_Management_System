@@ -4,6 +4,7 @@ import com.inventory.bean.*;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.Scanner;
 
 public class InventoryImplimentation implements InventoryManagement {
@@ -12,6 +13,7 @@ public class InventoryImplimentation implements InventoryManagement {
 	ArrayList<InventoryItem> iAl = new ArrayList<>();
 	
 	Scanner sc = new Scanner(System.in);
+	Scanner sc1 = new Scanner(System.in);
 
 	@Override
 	public void addProduct() {
@@ -112,6 +114,40 @@ public class InventoryImplimentation implements InventoryManagement {
 		for(InventoryItem i : iAl)
 		{
 			System.out.println(i+"       "+(i.getQuantity()*i.getProduct().getProductPrice()));
+		}
+		
+	}
+
+	@Override
+	public void updateInventory() {
+		
+		System.out.print("Enter Product ID To Update: ");
+		int id=sc.nextInt();
+		
+		ListIterator<InventoryItem> itr = iAl.listIterator();
+		while(itr.hasNext())
+		{
+			InventoryItem i = itr.next();
+			if(id==i.getProduct().getProductId())
+			{
+				System.out.print("Enter New Product Name: ");
+				String name=sc1.nextLine();
+				System.out.print("Enter New Product Price: ");
+				int price=sc.nextInt();
+				System.out.print("Enter New Product Category ID: ");
+				int cid=sc.nextInt();
+				System.out.print("Enter New Product Category Name: ");
+				String cName=sc1.nextLine();
+				System.out.print("Enter New QTY");
+				int qty= sc.nextInt();
+				
+				itr.set(new InventoryItem(new Product(id, name, new Category(cid, cName), price), qty));
+				System.out.println("Product Updated Sucessfully...");
+			}
+			else
+			{
+				System.out.println("Product Not Found...");
+			}
 		}
 		
 	}
